@@ -1,0 +1,44 @@
+:host {
+  padding: 0;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  padding-top: 100px;
+  min-height: 300px;
+  width:100%;
+  scroll-behavior: smooth;
+}
+
+.page_wrapper {
+    transition: 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+    overflow: hidden;    
+    color: #bdbdbd;    
+    opacity: 0.5;
+    padding: 0 50px;
+    &.focus {
+      color: #333;
+      opacity: 1;
+    }
+  }
+  
+  .inner_wrapper {
+    margin: auto;
+    width: 50%;
+    h3 {
+      font-weight: 400;
+      font-size: 26px;
+      word-break: break-word;
+    }
+  }
+  
+  
+@media(max-width: 600px) {
+  .inner_wrapper {
+    width: 95%;
+  }
+}

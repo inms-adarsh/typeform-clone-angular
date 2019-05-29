@@ -1,0 +1,16 @@
+<!-- Multiple Input Allowed -->
+<div id="multi-option">
+  <input id="question.identifier" class="typeform_input" type="text" #search>
+  <div class="selected_options">
+    <span *ngFor="let option of selectedOptions" (click)="removeOption(option)">
+      {{option.value}}
+    </span>
+  </div>
+  <ul class="chips">
+    <li class="chip" *ngFor="let choice of question.choices" (click)="addToSelectedOptions(choice)" [class.selected]="selectedOptions.indexOf(choice) !== -1">
+      {{ choice.value }}
+    </li>
+  </ul>
+  <app-continue-button *ngIf="selectedOptions.length > 0" (next)="gotoNext()"></app-continue-button>
+</div>
+<!-- multiple inputs allowed-->

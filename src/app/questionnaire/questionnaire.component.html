@@ -1,0 +1,12 @@
+<!-- List of Questions -->
+<div  *ngFor="let question of questions$ | async ; let i = index" class="page_wrapper" [class.focus]="i == 0" [id]="question.identifier">
+    <div class="inner_wrapper">
+      <h3>{{question.headline}}</h3>
+      <div *ngIf="question.question_type == 'multiple-choice'">
+        <app-single-option [question]="question" *ngIf="question.multiple === 'false'" (scrollNext)="gotoNext($event)"></app-single-option>
+        <app-multi-option [question]="question" *ngIf="question.multiple === 'true'" (scrollNext)="gotoNext($event)"></app-multi-option>
+      </div>
+      <app-text-answer *ngIf="question.question_type == 'text'" [question]="question" (scrollNext)="gotoNext($event)"></app-text-answer>
+  </div>
+</div>
+<!-- List of Questions -->

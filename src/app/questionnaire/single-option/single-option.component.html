@@ -1,0 +1,9 @@
+<!-- Multiple False -->
+<div *ngIf="question.multiple === 'false'" id="single-option">
+  <div class="options" *ngFor="let choice of question.choices; let i = index">
+    <input id="{{question.identifier}}{{i}}" (change)="gotoNext()" [(ngModel)]="selectedOption" [name]="question.identifier"
+      [value]="choice.value" type="radio">
+    <label for="{{question.identifier}}{{i}}" class="answer_block">{{choice.label}}</label>
+  </div>
+</div>
+<!-- !Multiple False -->

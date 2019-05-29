@@ -1,0 +1,31 @@
+input[type="radio"] {
+    display: none;
+
+    &:checked {
+        & + .answer_block {
+            background-color: rgba(82, 182, 172, 0.3);
+            cursor: default;
+        }
+    }
+}
+
+.answer_block {
+    border: 1px solid #55706D;
+    background-color: rgba(82, 182, 172, 0.1);
+    border-radius: 3px;  
+    width: 220px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    cursor: pointer;
+    transition: all 0.5s;
+
+    &:hover {
+        padding-left: 15px;
+        padding-right: 15px;
+        background-color: rgba(82, 182, 172, 0.3);
+    }
+
+}
+  

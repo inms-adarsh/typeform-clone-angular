@@ -1,0 +1,4 @@
+<div class="input-control">
+  <input type="text" class="typeform_input" [(ngModel)]="answer" (keypress)="onPressEnter($event)" autocomplete="off">
+</div>
+<app-continue-button *ngIf="answer" (next)="gotoNext()"></app-continue-button>

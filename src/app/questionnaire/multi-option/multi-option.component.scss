@@ -1,0 +1,47 @@
+
+.selected_options {
+    border: 0px;
+    width: 100%;
+    padding: 5px;
+    margin: 5px;
+    line-height: 30px;
+    span {
+      margin: 5px;
+      font-weight: 500;
+      cursor: pointer;
+      border-bottom: 1px solid #d5d5d5;
+    }
+  }
+  
+  .chips {
+    display: flex;
+    flex-flow: wrap;
+    padding: 0;
+    .chip {
+      margin: 5px;
+      background-color: #9b7e7e;
+      font-weight: 500;
+      color: #fff;;
+      display: flex;
+      font-size: 13px;
+      height: 32px;
+      line-height: 32px;
+      padding: 0 12px;
+      border-radius: 16px;  
+      list-style: none;
+    
+      transition: all 0.5s;
+  
+      &:hover, &.selected {
+        padding-left: 20px;
+        padding-right: 20px;
+        background-color: #52B6AC;
+        cursor: pointer;
+      }
+    }
+    
+  }
+  
+  .selected_chips {
+    @extend .chips;
+  }
